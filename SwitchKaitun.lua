@@ -5,7 +5,7 @@ local HttpService = game:GetService("HttpService");
 local LogService = game:GetService("LogService"); 
 
 local od; 
-od = hookfunction(print, function() end
+od = hookfunction(print, function() 
     end) 
 
 local GC = getconnections or get_signal_cons
