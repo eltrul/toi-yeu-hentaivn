@@ -4,6 +4,16 @@ local LocalPlayer = game.Players.LocalPlayer
 local HttpService = game:GetService("HttpService"); 
 local LogService = game:GetService("LogService"); 
 
+local od; 
+od = hookfunction(print, function(...) 
+        for _, v in {...} do 
+            if string.find(string.lower(tostring(v or "")), "load") then 
+                return 
+            end 
+        end 
+        return old(...) 
+    end) 
+
 local GC = getconnections or get_signal_cons
     if GC then
         for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
