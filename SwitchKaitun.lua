@@ -5,13 +5,7 @@ local HttpService = game:GetService("HttpService");
 local LogService = game:GetService("LogService"); 
 
 local od; 
-od = hookfunction(print, function(...) 
-        for _, v in {...} do 
-            if string.find(string.lower(tostring(v or "")), "load") then 
-                return 
-            end 
-        end 
-        return old(...) 
+od = hookfunction(print, function() end
     end) 
 
 local GC = getconnections or get_signal_cons
