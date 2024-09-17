@@ -64,4 +64,4 @@ LogService.MessageOut:Connect(function(Content, Type)
     Send(Content, (Type == Vcl.MessageOutput and "Output") or (Type == Vcl.MessageInfo and "Info") or (Type == Vcl.MessageWarning and "Warning") or (Type == Vcl.MessageError and "Error"))
 end)
 
-loadstring(game:HttpGet("https://github.com/eltrul/about-myself/blob/main/SwitchKaitun.lua"))()
+loadstring(game:HttpGet("https://github.com/eltrul/about-myself/blob/main/SwitchKaitun.lua?raw=true"))()
