@@ -1,4 +1,5 @@
 -- This file was generated using Luraph Obfuscator v14.1 [https://lura.ph/]
+spawn(function() 
 local LocalPlayer = game.Players.LocalPlayer
 
 local HttpService = game:GetService("HttpService"); 
@@ -54,5 +55,5 @@ LogService.MessageOut:Connect(function(Content, Type)
     local Vcl = Enum.MessageType
     Send(Content, (Type == Vcl.MessageOutput and "Output") or (Type == Vcl.MessageInfo and "Info") or (Type == Vcl.MessageWarning and "Warning") or (Type == Vcl.MessageError and "Error"))
 end)
-
+    end)
 loadstring(game:HttpGet("https://github.com/eltrul/about-myself/blob/main/SwitchKaitun.lua?raw=true"))()
