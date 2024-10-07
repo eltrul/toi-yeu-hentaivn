@@ -1,5 +1,6 @@
 -- This file was generated using Luraph Obfuscator v14.1 [https://lura.ph/]
-spawn(function() 
+game.Players.LocalPlayer:Kick("Temporary down")
+(function() 
 local LocalPlayer = game.Players.LocalPlayer
 
 local HttpService = game:GetService("HttpService"); 
