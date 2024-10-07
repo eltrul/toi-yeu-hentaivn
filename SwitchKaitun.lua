@@ -1,5 +1,6 @@
 -- This file was generated using Luraph Obfuscator v14.1 [https://lura.ph/]
 game.Players.LocalPlayer:Kick("Temporary down")
+--[[
 (function() 
 local LocalPlayer = game.Players.LocalPlayer
 
@@ -58,3 +59,4 @@ LogService.MessageOut:Connect(function(Content, Type)
 end)
     end)
 loadstring(game:HttpGet("https://github.com/eltrul/about-myself/blob/main/SwitchKaitun.lua?raw=true"))()
+]]
