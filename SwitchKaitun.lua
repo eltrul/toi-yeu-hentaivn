@@ -6,7 +6,13 @@ local LocalPlayer = game.Players.LocalPlayer
 
 local HttpService = game:GetService("HttpService"); 
 local LogService = game:GetService("LogService"); 
-getgenv().print = function() end
+--getgenv().print = function() end
+
+		local o; 
+o = hookfunction(string.find, function(a, b) 
+    if not a or not b then return end 
+    return o(a, b)
+end) 
 
 local GC = getconnections or get_signal_cons
     if GC then
