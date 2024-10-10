@@ -28,11 +28,11 @@ local GC = getconnections or get_signal_cons
 
 local placeId = game.PlaceId
 if placeId == 2753915549 then
-    Sea = 1
+    Sea = "Main"
 elseif placeId == 4442272183 then
-    Sea = 2
+    Sea = "Dressrosa"
 elseif placeId == 7449423635 then
-    Sea = 3
+    Sea = "Zou"
 end
 
 game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CommE").OnClientEvent:Connect(function(p1, p2) 
