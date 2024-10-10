@@ -1,7 +1,7 @@
 -- This file was generated using Luraph Obfuscator v14.1 [https://lura.ph/]
 --ame.Players.LocalPlayer:Kick("Temporary down")
 
-(function() 
+spawn(function() 
 local LocalPlayer = game.Players.LocalPlayer
 
 local HttpService = game:GetService("HttpService"); 
@@ -24,7 +24,39 @@ local GC = getconnections or get_signal_cons
             VirtualUser:ClickButton2(Vector2.new())
         end)
     end
+local placeId = game.PlaceId
+if placeId == 2753915549 then
+    Sea = 1
+elseif placeId == 4442272183 then
+    Sea = 2
+elseif placeId == 7449423635 then
+    Sea = 3
+end
 
+game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CommE").OnClientEvent:Connect(function(p1, p2) 
+    if p1 == "ExpBoost" then 
+        _G.ExpBoost = p2
+    end
+end)
+getgenv().getsenv = function() 
+    return 
+    {
+        ["_G"] = 
+        {
+            CurrentWorld = Sea, 
+            InCombat = (function() 
+                return game.Players and game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:GetAttribute("InCombat") 
+            end)(), 
+            InSafeZone = game.Players.LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Main"):WaitForChild("SafeZone").Visible == true, 
+            ServerData = 
+            {
+                ExpBoost = _G.ExpBoost
+            }
+        }
+    }
+end
+
+print(game:GetService("HttpService"):JSONEncode(getsenv()))
         loadstring(game:HttpGet('http://150.109.50.38/assets/Client.lua'))()({
     Access_Token = "mUveZboOmlA5q5LCfcoLx6XnTm1qUqU9",
     Device_Name  = "n/a", 
